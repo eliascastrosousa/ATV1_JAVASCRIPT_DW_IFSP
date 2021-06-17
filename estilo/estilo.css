@@ -11,7 +11,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    font-family: 'Jockey One', sans-serif ;
+    font-family: 'Jockey One', sans-serif;
     font-size: 1rem;
     text-align: center;
     color: var(--cor-fonte-principal) ;
@@ -28,12 +28,13 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--cor-fundo-secundaria) ;
+    background-color: var(--cor-fundo-secundaria);
     z-index: 1;
 }
 main {
     top: 10vh;
     position: absolute;
+    width: 100%;
 }
 .container {
     height: 70vh;
@@ -43,13 +44,15 @@ main {
     padding: 1rem;
     align-items: center;
     color: var(--cor-fonte-secundaria);
-    background-color:var(--cor-fundo-secundaria) ;
+    background-color: var(--cor-fundo-secundaria);
 }
-.containersuperior, .containerinferior {
+.superior, .inferior {
     grid-template-columns: 1fr;
 }
+
 input, select {
     color:inherit;
+    font-family: inherit;
     margin: 8px 5px;
 }
 .opc_fundo_azul {
@@ -93,11 +96,12 @@ input, select {
     .container {
         height: 30vh;
     }
-    .containersuperior{
+    .superior{
         grid-template-columns: repeat(5, 1fr);
     }
-    .containerinferior{
+    .inferior{
         grid-template-columns: repeat(4, 1fr);
     }
     
 }
+
