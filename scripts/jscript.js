@@ -11,7 +11,7 @@ function FunMudaCorFundo() {
 
 /* Alterar Cor da Fonte */ 
 
-let  obj_rb_fonte_array = document.getElementsByName('rb_fonte') // 
+const obj_rb_fonte_array = document.querySelectorAll('rb_fonte') // 
 const obj_div_area_teste = document.querySelector('#div_area_teste')
 
 obj_rb_fonte_array.addEventListener('click', FunMudaCorFonte)
