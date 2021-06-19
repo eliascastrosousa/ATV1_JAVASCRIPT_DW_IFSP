@@ -19,8 +19,50 @@ for (obj_rb_fonte of obj_rb_fonte_array) { // aqui estou apelidando o obj e cria
 }
 
 function FunMudaCorFonte() {
-    for    skdfgjoadfi     
+    for (obj_rb_fonte of obj_rb_fonte_array) {
+        if (obj_rb_fonte.checked) {
+            obj_div_area_teste.classList.add(obj_rb_fonte.value)
+        }else {
+            obj_div_area_teste.classList.remove(obj_rb_fonte.value)
+        }
+    }
 }
 
-/*obj_div_area_teste.setAttribute('class', obj_rb_fonte_array.value)*/ 
+/* Decorar com linha no meio e borda */ 
 
+const obj_cb_linha_meio = document.querySelector('#cb_linha_meio')
+const obj_cb_borda = document.querySelector('#cb_borda')
+ 
+
+obj_cb_linha_meio.addEventListener('click', FunLinhaMeio)
+obj_cb_borda.addEventListener('click', FunBorda)
+
+function FunLinhaMeio() {
+    if (obj_cb_linha_meio.checked) {
+        obj_div_area_teste.classList.add(obj_cb_linha_meio.value)
+    }
+    else {
+        obj_div_area_teste.classList.remove(obj_cb_linha_meio.value)
+    }
+}
+function FunBorda() {
+    if (obj_cb_borda.checked) {
+        obj_div_area_teste.classList.add('class', obj_cb_borda.value)
+    } else {
+        obj_div_area_teste.classList.remove('class', obj_cb_borda.value)
+    }
+}
+
+const obj_txt_texto_novo = document.querySelector('#txt_texto_novo')
+const obj_bt_troca_texto = document.querySelector('#bt_troca_texto')
+
+obj_bt_troca_texto.addEventListener('click', FunTrocaTexto)
+
+function FunTrocaTexto() {
+    
+    if (obj_txt_texto_novo.value != '') {
+        obj_div_area_teste.innerText = obj_txt_texto_novo.value
+    }else {
+        window.alert('Preencha o campo corretamente!')
+    }
+}
