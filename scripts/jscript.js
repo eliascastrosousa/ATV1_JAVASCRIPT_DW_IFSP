@@ -19,7 +19,7 @@ for (obj_rb_fonte of obj_rb_fonte_array) { // aqui estou apelidando o obj e cria
 }
 
 function FunMudaCorFonte() {
-    for         
+    for    skdfgjoadfi     
 }
 
 /*obj_div_area_teste.setAttribute('class', obj_rb_fonte_array.value)*/ 
