@@ -66,3 +66,54 @@ function FunTrocaTexto() {
         window.alert('Preencha o campo corretamente!')
     }
 }
+
+const obj_sel_fundocabecalho = document.querySelector('#sel_fundocabecalho')
+const obj_cabecalho = document.querySelector('#cabecalho')
+
+obj_sel_fundocabecalho.addEventListener('change', FunMudaCorCabecalho)
+
+function FunMudaCorCabecalho() {
+    obj_cabecalho.setAttribute('class', obj_sel_fundocabecalho.value)
+}
+
+const obj_imagemdefundo = document.querySelector('#imagemdefundo')
+const obj_AreaTesteFundo = document.querySelector('#AreaTesteFundo')
+
+obj_imagemdefundo.addEventListener('click', FunImagemFundo)
+
+function FunImagemFundo() {
+    if (obj_imagemdefundo.checked){
+        obj_AreaTesteFundo.classList.add(obj_imagemdefundo.value)
+    }else {
+        obj_AreaTesteFundo.classList.remove(obj_imagemdefundo.value)
+    }
+}
+
+const obj_opacidadetransparencia = document.querySelector('#opacidadetransparencia')
+const obj_imagemjava = document.querySelector('#imagemjava')
+
+obj_opacidadetransparencia.addEventListener('click', FunOpacidadeTransp)
+
+function FunOpacidadeTransp() {
+    if (obj_opacidadetransparencia.checked){
+        obj_imagemjava.classList.add(obj_opacidadetransparencia.value)
+    }else {
+        obj_imagemjava.classList.remove(obj_opacidadetransparencia.value)
+    }
+}
+
+const obj_Audiowide = document.querySelector('#Audiowide')
+const obj_Monoton = document.querySelector('#Monoton')
+const obj_AreaTesteParagrafo = document.querySelector('#AreaTesteParagrafo')
+
+obj_Audiowide.addEventListener('click', FunAudiowide)
+obj_Monoton.addEventListener('click', FunMonoton)
+
+function FunAudiowide() {
+    obj_AreaTesteParagrafo.innerText = 'Fonte: AudioWide'
+    obj_AreaTesteParagrafo.setAttribute('class', obj_Audiowide.value)
+}
+function FunMonoton() {
+    obj_AreaTesteParagrafo.innerText = 'Fonte: Monoton'
+    obj_AreaTesteParagrafo.setAttribute('class', obj_Monoton.value)
+}

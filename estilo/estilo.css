@@ -64,6 +64,15 @@ input, select {
 .opc_fundo_verde {
     background-color: mediumaquamarine;
 }
+.opc_fundocabecalho_azul {
+    background-color: skyblue;
+}
+.opc_fundocabecalho_cinza {
+    background-color: silver;
+}
+.opc_fundocabecalho_verde {
+    background-color: mediumaquamarine;
+}
 .opc_fonte_marrom {
     color: sienna;
 }
@@ -78,6 +87,12 @@ input, select {
 }
 .opc_borda {
     border: 3px solid gold;
+}
+.imagemdefundo {
+    background-image: url('../imagens/background.svg');
+}
+.opacidadetransparencia {
+    opacity: 0.5;
 }
 #imagemjava {
     width: 25%;
